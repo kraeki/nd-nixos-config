@@ -81,7 +81,7 @@
     google-chrome
     hyprland
     hyprlock
-    ghostty
+    kitty
     waybar
     zsh
     zsh-powerlevel10k
@@ -91,6 +91,8 @@
     bluez
     kanshi
     thunderbolt # enabling docking station (tbtadm)
+    neofetch
+    nautilus
 
     obsidian
     _1password-gui
@@ -99,11 +101,24 @@
     curl
     docker
     audacity
+
     steam
+    protontricks
+
 
     slack
   ];
 
+  ## Steam 
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true;  # Optional: only if you plan to use Remote Play
+    dedicatedServer.openFirewall = false;  # Optional
+  };
+  
+  hardware.opengl.driSupport32Bit = true; # Required for 32-bit games
+  hardware.steam-hardware.enable = true;  # Enables udev rules for game controllers
+  ## - Steam
   
   programs.hyprland.enable = true; 
   programs.zsh.enable = true; 
