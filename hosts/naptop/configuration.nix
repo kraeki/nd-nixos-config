@@ -8,7 +8,6 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-#      <home-manager/nixos>
     ];
 
   # Bootloader.
@@ -25,10 +24,6 @@
 
   networking.hostName = "naptop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -72,8 +67,6 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
-  #home-manager.users.kraeki = import ./home.nix;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -130,12 +123,6 @@
   # services.openssh.enable = true;
 
   services.blueman.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
