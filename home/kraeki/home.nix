@@ -3,7 +3,35 @@
 {
   home.username = "kraeki";
   home.homeDirectory = "/home/kraeki";
-
-  programs.zsh.enable = true;
   home.stateVersion = "23.11";
+
+  programs.home-manager.enable = true;
+
+  programs.zsh = {
+    enable = true;
+
+    oh-my-zsh = {
+      enable = true;
+      plugins = [ "git" ]; # z.B. git oder andere
+      theme = ""; # Wichtig: kein Theme hier setzen!
+    };
+
+    plugins = [
+      {
+        name = "zsh-autosuggestions";
+        src = pkgs.zsh-autosuggestions;
+      }
+      {
+        name = "zsh-syntax-highlighting";
+        src = pkgs.zsh-syntax-highlighting;
+      }
+    ];
+
+    initContent = ''
+      # Powerlevel10k initialisieren
+      source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
+      [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+    '';
+  };
 }
+
