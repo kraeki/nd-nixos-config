@@ -74,10 +74,13 @@
     vim
     fd
     neovim
+    fzf
     git
     tig
     gnumake
     hyprland
+    jq # used by hyprland scripts
+    wpaperd # wallpaper daemon
     hyprlock
     kitty
     waybar
