@@ -91,6 +91,10 @@
     thunderbolt # enabling docking station (tbtadm)
     neofetch
     nautilus
+    swappy
+    grim
+    slurp
+    stow
 
     obsidian
     _1password-gui
