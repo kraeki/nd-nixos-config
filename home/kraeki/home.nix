@@ -12,8 +12,8 @@
 
     oh-my-zsh = {
       enable = true;
-      plugins = [ "git" ]; # z.B. git oder andere
-      theme = ""; # Wichtig: kein Theme hier setzen!
+      plugins = [ "git" "per-directory-history" ]; 
+      theme = ""; 
     };
 
     plugins = [
