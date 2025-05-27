@@ -75,10 +75,8 @@
     fd
     neovim
     git
+    tig
     gnumake
-    inkscape
-    gimp
-    google-chrome
     hyprland
     hyprlock
     kitty
@@ -96,15 +94,16 @@
 
     obsidian
     _1password-gui
-    stow
     wget
     curl
     docker
     audacity
+    inkscape
+    gimp
+    google-chrome
 
     steam
     protontricks
-
 
     slack
   ];
