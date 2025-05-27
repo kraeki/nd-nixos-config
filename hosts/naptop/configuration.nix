@@ -73,12 +73,20 @@
   environment.systemPackages = with pkgs; [
     vim
     fd
+    # neovim 
     neovim
     fzf
+    clang
+    # -- neovim 
     git
     tig
     gnumake
     hyprland
+    dunst
+    bc
+    brightnessctl
+    upower
+    libnotify
     jq # used by hyprland scripts
     wpaperd # wallpaper daemon
     hyprlock
@@ -144,6 +152,7 @@
   # services.openssh.enable = true;
 
   services.blueman.enable = true;
+  services.upower.enable = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
