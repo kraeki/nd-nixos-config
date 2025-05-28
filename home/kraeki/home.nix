@@ -34,36 +34,36 @@
     '';
   };
 
-  home.packages = with pkgs; [ dracula-theme ];
-  gtk = {
-    enable = true;
-    theme = {
-      name = "Dracula";
-      package = pkgs.dracula-theme;
-    };
-    iconTheme = {
-      name = "Dracula";
-      package = pkgs.dracula-theme;
-    };
-    cursorTheme = {
-      name = "Dracula";
-      package = pkgs.dracula-theme;
-    };
-    
-    gtk3.extraConfig = {
-      "gtk-application-prefer-dark-theme" = "1";
-    };
-    gtk4.extraConfig = {
-      "gtk-application-prefer-dark-theme" = "1";
-    };
-  };
+  # home.packages = with pkgs; [ dracula-theme ];
+  # gtk = {
+  #   enable = true;
+  #   theme = {
+  #     name = "Dracula";
+  #     package = pkgs.dracula-theme;
+  #   };
+  #   iconTheme = {
+  #     name = "Dracula";
+  #     package = pkgs.dracula-theme;
+  #   };
+  #   cursorTheme = {
+  #     name = "Dracula";
+  #     package = pkgs.dracula-theme;
+  #   };
+  #   
+  #   gtk3.extraConfig = {
+  #     "gtk-application-prefer-dark-theme" = "1";
+  #   };
+  #   gtk4.extraConfig = {
+  #     "gtk-application-prefer-dark-theme" = "1";
+  #   };
+  # };
 
-  # Ensure GTK settings are applied for Wayland
-  home.pointerCursor = {
-    gtk.enable = true;
-    package = pkgs.dracula-theme;
-    name = "Dracula-cursors";
-    size = 24; # Adjust size as needed
-  };
+  # # Ensure GTK settings are applied for Wayland
+  # home.pointerCursor = {
+  #   gtk.enable = true;
+  #   package = pkgs.dracula-theme;
+  #   name = "Dracula-cursors";
+  #   size = 24; # Adjust size as needed
+  # };
 }
 
