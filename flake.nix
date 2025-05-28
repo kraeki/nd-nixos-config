@@ -1,6 +1,6 @@
 # ~/nixos-config/flake.nix
 {
-  description = "My NixOS system configuration";
+  description = "ND's NixOS system configuration";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -20,6 +20,7 @@
         inherit system;
         modules = [
           ./hosts/naptop/configuration.nix
+          ./theme.nix
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
